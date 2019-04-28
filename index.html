@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <title>Illustr8</title>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+</head>
+
+<body>
+<h1 id="home"></h1>
+    <div class="bar">
+        <ul class="navheader">
+            <li><a href="#home"><img class="resize2" src="images/illustr8-logo.jpg"></a></li>
+        </ul>
+        <ul class="nav">
+            <li><a href="#images">Image Gallery</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#more">More</a></li>
+            <li><a href="#home">Home </a></li>
+        </ul>
+
+    </div>
+
+
+    <div class="introduction">
+
+        <div class="maintext">
+            <strong>Showcasing Images</strong>
+        </div>
+        <div class="secondtext">
+            By James Wakelin
+        </div>
+        <div class="downarrow">
+            <a href="#images"><img src="images/white-down-arrow-png-2-300x300.png" width="15%"></a>
+        </div>
+        <h1 id="images"></h1>
+    </div>
+    
+    
+    <div class="images">
+        <div class="imagestitle">
+            Image Gallery
+        </div>
+        <div class="imagesinfo">
+            <!-- The following is edited code imported from the internet with the jqueryslider I used -->
+            <div class="imageslides">
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"><strong>1 / 7</strong></div>
+                        <img class="resize1" src="images/westfieldsnowman-small.jpg">
+                        <div class="text">Advertising</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"><strong>2 / 7</strong></div>
+                        <img class="resize1" src="images/vendingmachine-small.jpg">
+                        <div class="text">Storyboards and Visuals</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"><strong>3 / 7</strong></div>
+                        <img class="resize1" src="images/jean-luc-small.jpg">
+                        <div class="text">Portraiture</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"><strong>4 / 7</strong></div>
+                        <img class="resize1" src="images/home-small.jpg">
+                        <div class="text">Books and Magazines</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"><strong>5 / 7</strong></div>
+                        <img class="resize1" src="images/error-message-small.jpg">
+                        <div class="text">Linework</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"><strong>6 / 7</strong></div>
+                        <img class="resize1" src="images/drink-small.jpg">
+                        <div class="text">Editorial</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext"><strong>7 / 7</strong></div>
+                        <img class="resize1" src="images/pukeko-small.jpg">
+                        <div class="text">More</div>
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+                </div>
+
+                <br>
+
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                </div>
+
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                        showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                        showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                        var i;
+                        var slides = document.getElementsByClassName("mySlides");
+                        var dots = document.getElementsByClassName("dot");
+                        if (n > slides.length) {
+                            slideIndex = 1
+                        }
+                        if (n < 1) {
+                            slideIndex = slides.length
+                        }
+                        for (i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";
+                        }
+                        for (i = 0; i < dots.length; i++) {
+                            dots[i].className = dots[i].className.replace(" active", "");
+                        }
+                        slides[slideIndex - 1].style.display = "block";
+                        dots[slideIndex - 1].className += " active";
+                    }
+
+                </script>
+
+            </div>
+            <!-- The imported code ends here -->
+        </div>
+        <div class="imageslinks">
+            <ul class="links">
+                <li><a href="advertising.html">
+                        <div class="images"><img class="resize" src="images/westfieldsnowman-small.jpg"></div>Advertising
+                    </a></li>
+                <li><a href="storyboardsandvisuals.html">
+                        <div class="images"><img class="resize" src="images/vendingmachine-small.jpg"></div>Storyboards and Visuals
+                    </a></li>
+                <li><a href="portraiture.html">
+                        <div class="images"><img class="resize" src="images/jean-luc-small.jpg"></div>Portraiture
+                    </a></li>
+                <li><a href="booksandmagazines.html">
+                        <div class="images"><img class="resize" src="images/home-small.jpg"></div>Books and Magazines
+                    </a></li>
+                <li><a href="linework.html">
+                        <div class="images"><img class="resize" src="images/error-message-small.jpg"></div>Linework
+                    </a></li>
+                <li><a href="editorial.html">
+                        <div class="images"><img class="resize" src="images/drink-small.jpg"></div>Editorial
+                    </a></li>
+                <li><a href="more.html">
+                        <div class="images"><img class="resize" src="images/pukeko-small.jpg"></div>More
+                    </a></li>
+            </ul>
+        </div>
+<h1 id="about"></h1>
+    </div>
+    <div class="about">
+        <div class="abouttext">
+            <div class="abouttitle">
+                <strong>About</strong>
+            </div>
+            Whether it’s a simple line drawing or a highly detailed rendering, we aim to produce works of excellence that meet your deadline, every time. James Wakelin has been illustrating and designing since 1993, working for clients both in New Zealand and overseas, with personal commissions, editorial work and work for larger agencies.
+        </div>
+        <div class="aboutphoto">
+            <img class="resizeabout" src="images/old-man-home.jpg">
+
+        </div>
+    </div>
+
+    <h1 id="more"></h1>
+    <div class="more">
+        <div class="moretitle">
+            <strong>More</strong>
+        </div>
+        <div class="moreinfo">
+
+            <div class="moreclients">
+                <a href="clients.html">Clients<div class="moretext">
+                        View our full list of clients
+                    </div></a>
+
+                <div class="morebiography">
+                    <a href="biography.html">Biography<div class="moretext">
+                            Of James Wakelin
+                        </div></a>
+
+                </div>
+                <div class="morecontact">
+                    <a>Contact<div class="moretext">
+                            Mobile: +64 21 742 058<br>Email: james@illustr8.co.nz
+                        </div></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
